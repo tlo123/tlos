@@ -27,7 +27,7 @@
 
     <script>
         const channelName = 'xtlos';  // Set the Twitch username here
-        const accessToken = 'YOUR_ACCESS_TOKEN';  // Replace with your StreamElements access token
+        const accessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJjaXRhZGVsIiwiZXhwIjoxNzUyNzkzNTE4LCJqdGkiOiI4NzIxMmY2MS1iOWMxLTQ5ZGItOWQ4Mi1jMDM3ODM0NzIzYTgiLCJjaGFubmVsIjoiNjY1N2ZjMmU5NjczNGI2Yjk5NWZiNDMxIiwicm9sZSI6Im93bmVyIiwiYXV0aFRva2VuIjoiZEt4Z1pIVnZqTzhXb25FZ2ljaFZWZkpUUEcxTS1MMW5DejVkRklYTThacXdfczdOIiwidXNlciI6IjY1NDA3NzhkYTk1M2Y4ZGM4YWM1YTg2ZSIsInVzZXJfaWQiOiJhMDgzNTYwNy1mNzQ3LTRmMWQtOWYzZi1mYmMwMTVkNTQyMmUiLCJ1c2VyX3JvbGUiOiJjcmVhdG9yIiwicHJvdmlkZXIiOiJ0d2l0Y2giLCJwcm92aWRlcl9pZCI6IjEwNzU5MDEwMDkiLCJjaGFubmVsX2lkIjoiNjdjNGU1M2YtNGE0MS00ZjcxLWE1ZDQtMjhjNzQzYTM5MjVkIiwiY3JlYXRvcl9pZCI6IjEwMTI0YjUxLTdiYjktNDhiMC1iMGEyLTc5ZWYwODQ1ZWVmZCJ9.HFEzpRz6FpN7P_2Xon-Lu5Y5qdQqHx5pe3TE1lRgktU';  // Replace with your StreamElements access token
 
         async function getSubcount() {
             try {

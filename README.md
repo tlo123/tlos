@@ -1,8 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Twitch Subcount for xtlos</title>
+    <title>StreamElements Subcount for xtlos</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -25,22 +26,22 @@
     <div id="subcount">Loading...</div>
 
     <script>
-        const twitchUser = 'xtlos';
+        const channelName = 'xtlos';  // Set the Twitch username here
+        const accessToken = 'YOUR_ACCESS_TOKEN';  // Replace with your StreamElements access token
 
         async function getSubcount() {
             try {
-                // Replace this URL with the actual Twitch API endpoint for subscriptions
-                // You'll need to handle OAuth authentication, and this endpoint might not exist without a subscription.
-                const response = await fetch(`https://api.twitch.tv/helix/subscriptions?broadcaster_id=${twitchUser}`, {
+                const response = await fetch(`https://api.streamelements.com/kappa/v2/subs/${channelName}`, {
                     method: 'GET',
                     headers: {
-                        'Client-ID': 'YOUR_TWITCH_CLIENT_ID',  // Replace with your Twitch client ID
-                        'Authorization': 'Bearer YOUR_ACCESS_TOKEN'  // Replace with your OAuth access token
+                        'Authorization': `Bearer ${accessToken}`  // Add your Bearer token here
                     }
                 });
+                
                 const data = await response.json();
-                if (data.data && data.data.length > 0) {
-                    const subCount = data.data.length;  // You may need to modify this depending on response structure
+                
+                if (data.length > 0) {
+                    const subCount = data.length;  // The number of active subscriptions
                     document.getElementById('subcount').innerText = `Subcount: ${subCount}`;
                 } else {
                     document.getElementById('subcount').innerText = 'No subscriptions found or unable to fetch data.';
@@ -56,4 +57,3 @@
     </script>
 </body>
 </html>
-
